@@ -1,0 +1,2 @@
+# Y7000Series_Hackintosh
+给联想拯救者Y7000系列提供HackintoshEFI
