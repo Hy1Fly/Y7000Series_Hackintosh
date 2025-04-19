@@ -2,27 +2,23 @@
 给联想拯救者Y7000系列提供HackintoshEFI
 ## 概述
 
-本文的目的是让 LENOVO 拯救者系列笔记本电脑尽量完美的使用上 MacOS。
+本EFI适用于LENOVO 拯救者Y7000系列笔记本
+并且会提及一些注意事项
 
+感谢@xiaoMGithub
+(*ゝω・)ﾉThanks!
 
 ## 适用系统
-
-macOS Ventura 13.x  
-MacOS Monterey 12.x  
-MacOS Big Sur 11.x  
-MacOS Catalina 10.15.x  
-MacOS Mojave 10.14.x  
-MacOS High Sierra 10.13.6 (17G2112)
+ 
+MacOS 10.13~15.0
 
 ## 适用型号
 
 - Y7000/Y7000P/Y9000K-2018
 - Y7000/Y7000P/Y9000K-2019
 - Y7000/Y7000P/Y9000K-2020
-- Y530/Y540/Y545/Y730/Y740
-- Legion 5i/Legion 7
 
-## BIOS确保设置
+## BIOS设置
 - 启用UEFI启动。
 - 禁用安全启动。
 - SATA模式设置为AHCI。
@@ -52,6 +48,8 @@ MacOS High Sierra 10.13.6 (17G2112)
 - HDMI
 - Type-C(扩展坞)
 - 外接显示器(Displaylink)
+- Nvdia显卡（据说可以使用OCLP进行驱动，但只支持GTX1060以下，并且不推荐！！！）
+- 隔空投送（使用白果卡应该就可以工作了）
 
 ## 优化命令
 ```
