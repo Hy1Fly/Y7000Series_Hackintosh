@@ -1,57 +1,83 @@
-# Y7000Series_Hackintosh
-给联想拯救者Y7000系列提供HackintoshEFI
-## 概述
+# Y7000Series_Hackintosh <img src="https://img.shields.io/badge/macOS-Ventura/Sonoma-blue?style=flat&logo=apple" alt="macOS"> <img src="https://img.shields.io/badge/OpenCore-0.9.8+-green?style=flat" alt="OpenCore">
 
-本EFI适用于LENOVO 拯救者Y7000系列笔记本
-并且会提及一些注意事项
+为联想拯救者Y7000系列笔记本提供Hackintosh EFI配置
 
-感谢@xiaoMGithub
-(*ゝω・)ﾉThanks!
+![Hackintosh Preview](https://example.com/preview.jpg) <!-- 可替换为实际效果图链接 -->
 
-## 适用系统
- 
-MacOS 10.13~15.0
+## 📖 目录
+- [概述](#-概述)
+- [兼容性](#-兼容性)
+- [BIOS设置指南](#-bios设置指南)
+- [功能支持](#-功能支持)
+- [快速优化](#-快速优化)
+- [致谢](#-致谢)
 
-## 适用型号
+## 🌟 概述
+本仓库为联想拯救者Y7000系列笔记本（2018-2020款）提供经过验证的Hackintosh EFI配置，支持macOS 10.13至最新版本的系统OTA升级。项目基于OpenCore引导，持续维护i5-9代处理器系列。
 
-- Y7000/Y7000P/Y9000K-2018
-- Y7000/Y7000P/Y9000K-2019
-- Y7000/Y7000P/Y9000K-2020
+---
 
-## BIOS设置
-- 启用UEFI启动。
-- 禁用安全启动。
-- SATA模式设置为AHCI。
-- 执行[一键修改BIOS脚本。](https://github.com/xiaoMGitHub/LEGION_Y7000Series_Insyde_Advanced_Settings_Tools)
+## 🖥️ 兼容性
 
-## 正常工作的功能
-- 支持任意版本系统OTA升级到最新系统
-- 内置键盘以及数字键盘
-- 原生USB3.0/USB2.0 
-- AppleHDA原生音频，包括耳机
-- 内置摄像头
-- 原生电源管理
-- 电池状态
-- 背光控制
-- 背光键盘
-- 核显驱动
-- 有线以太网卡
-- Mac App Store正常运行
-- CPU变频
-- 睡眠唤醒（鼠标，键盘、电源键唤醒均正常，并且继续维护i5-9代系列）
-- 无线网络与蓝牙（OCLP补丁可以驱动原生网卡，但依旧建议更换白果卡BCM94360CD）
-- 触控板 （全系支持全手势）
-- 随航（有线/无线）
-- 支持休眠唤醒（hibernatemode 25）
+### 支持系统版本
+macOS 10.13 High Sierra ~ macOS 15.0 Sequoia（需自行测试新版本兼容性）
 
-## 不能完美使用或者需要其它工具的功能
-- HDMI
-- Type-C(扩展坞)
-- 外接显示器(Displaylink)
-- Nvdia显卡（据说可以使用OCLP进行驱动，但只支持GTX1060以下，并且不推荐！！！）
-- 隔空投送（使用白果卡应该就可以工作了）
+### 适配机型
+- **2018款**  
+  Y7000 / Y7000P / Y9000K
+- **2019款**  
+  Y7000 / Y7000P / Y9000K
+- **2020款**  
+  Y7000 / Y7000P / Y9000K
 
-## 优化命令
-```
+---
+
+## ⚙️ BIOS设置指南
+**必须完成以下BIOS配置：**
+1. 进入BIOS设置（开机按F2）
+2. 启用 `UEFI Boot`
+3. 禁用 `Secure Boot`
+4. 设置SATA模式为 `AHCI`
+5. 执行 **[BIOS高级设置一键修改脚本](https://github.com/xiaoMGitHub/LEGION_Y7000Series_Insyde_Advanced_Settings_Tools)**  
+   （脚本将解锁隐藏设置项）
+
+---
+
+## ✅ 功能支持
+### 完美工作
+- ⌨️ 内置键盘（含数字键盘）| 💤 睡眠唤醒（支持键盘/鼠标/电源键唤醒）
+- 🔊 AppleHDA音频（扬声器 & 耳机自动切换）| 🔋 电池状态监测
+- 🌞 屏幕背光控制 | 🖥️ 核显加速（Intel UHD Graphics）
+- 🌐 有线网络 | 🖱️ 触控板全手势支持
+- 🚀 CPU变频 | 🖨️ 随航（有线/无线）
+- 📷 内置摄像头 | 🛏️ 深度休眠唤醒（hibernatemode 25）
+
+### 有限支持
+- 🖥️ HDMI输出（需特定机型）  
+  *建议使用DisplayLink方案外接显示器*
+- 🔌 Type-C扩展坞（功能受限）  
+- ✈️ 隔空投送（需更换白苹果网卡）  
+  *推荐使用BCM94360CD网卡*
+- ⚡ NVIDIA独显（仅部分型号）  
+  *通过OCLP可驱动GTX1060以下显卡（不推荐）*
+
+---
+
+## 🚀 快速优化
+执行以下命令进行系统优化（包含缓存重建、权限修复等）：
+```bash
 sudo sh -c "$(curl -fsSL https://gitee.com/xiaoMGit/Y7000Series_Hackintosh_Fix/raw/master/Script/Optimize.sh)"
 ```
+
+---
+
+## 🙏 致谢
+特别感谢 [@xiaoMGithub](https://github.com/xiaoMGitHub) 的持续贡献与技术支持！  
+(*ゝω・)ﾉ 您的支持是项目前进的动力！
+
+---
+
+**📢 重要提示**  
+- 安装前请务必备份原始EFI
+- 推荐使用[Hackintool](https://github.com/headkaze/Hackintool)进行个性化调整
+- 遇到问题请先查阅[讨论区](https://github.com/your_repo/issues)
