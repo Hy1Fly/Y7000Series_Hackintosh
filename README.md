@@ -1,4 +1,4 @@
-# Y7000Series_Hackintosh <img src="https://img.shields.io/badge/macOS-Ventura/Sonoma-blue?style=flat&logo=apple" alt="macOS"> <img src="https://img.shields.io/badge/OpenCore-0.9.8+-green?style=flat" alt="OpenCore">
+# Y7000Series_Hackintosh <img src="https://img.shields.io/badge/macOS-Ventura/Sonoma-blue?style=flat&logo=apple" alt="macOS"> <img src="https://img.shields.io/badge/OpenCore-1.0.0+-green?style=flat" alt="OpenCore">
 
 为联想拯救者Y7000系列笔记本提供Hackintosh EFI配置
 
@@ -72,7 +72,7 @@ sudo sh -c "$(curl -fsSL https://gitee.com/xiaoMGit/Y7000Series_Hackintosh_Fix/r
 ---
 
 ## 🙏 致谢
-特别感谢 [@xiaoMGithub](https://github.com/xiaoMGitHub) 的持续贡献与技术支持！  
+特别感谢 [@xiaoMGithub](https://github.com/xiaoMGitHub) 与 [@Cey1anze](https://github.com/Cey1anze) 的持续贡献与技术支持！  
 (*ゝω・)ﾉ 您的支持是项目前进的动力！
 
 ---
@@ -80,4 +80,4 @@ sudo sh -c "$(curl -fsSL https://gitee.com/xiaoMGit/Y7000Series_Hackintosh_Fix/r
 **📢 重要提示**  
 - 安装前请务必备份原始EFI
 - 推荐使用[Hackintool](https://github.com/headkaze/Hackintool)进行个性化调整
-- 遇到问题请先查阅[讨论区](https://github.com/your_repo/issues)
+- 遇到问题请先查阅[讨论区](https://github.com/Hy1Fly/Y7000Series_Hackintosh/issues)
